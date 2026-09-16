@@ -18,7 +18,7 @@ else:
     gadget_density = 0
 
 mission_seconds = minutes * 60
-
+mission_time_remaining = minutes - 7
 
 mission_code = f'{name.upper()}-{fav_color.upper()}-{str(age)}'
 
@@ -44,8 +44,8 @@ Training Percentage: {training_percentage * 100}%
 Gadgets: {num_gadgets}
 Gadget Density: {gadget_density} per training year
  
-Mission Time: 37 minutes
-Mission Time Remaining: {minutes} minutes
+Mission Time: {minutes} minutes
+Mission Time Remaining: {mission_time_remaining} minutes
 Mission Time in Seconds: {mission_seconds}
 
 Adult Agent: {is_adult}
