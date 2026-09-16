@@ -49,7 +49,7 @@ Mission Time Remaining: {minutes} minutes
 Mission Time in Seconds: {mission_seconds}
 
 Adult Agent: {is_adult}
-Many Gadgets: False
+Many Gadgets: {has_many_gadgets}
 Training Experience: {has_training_experience}
  
 ====================================
