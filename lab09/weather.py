@@ -1,6 +1,5 @@
 import requests
 import argparse
-import sys
 from get_commands import get_coords, get_noaa_endpoint, get_noaa_forecast
 
 #MWCC Latitude: 42.59529
@@ -14,12 +13,12 @@ from get_commands import get_coords, get_noaa_endpoint, get_noaa_forecast
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-l', '--location', action='store_true', required=True, help='Enter your city and state (Format: gardner MA)')
+    parser.add_argument('-l', '--location', action='store_true', required=True, help='Enter your city and state (Format: "Gardner,MA")')
     args = parser.parse_args()
 
-    get_coords(sys.argv[0])
-    
-    print(sys.argv[0])
+    if args.location:
+        locate = args.location.split(',')
+        get_coords(locate[0],locate[1])
 
 
 if __name__ == '__main__':
