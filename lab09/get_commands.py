@@ -9,7 +9,7 @@ def get_coords(city, state):
     request_headers = {'User-Agent': 'MWCC-student1'}
     response = requests.get(request_url, params=request_params, headers=request_headers)
     data = response.json()[0]
-    return {data['lat']},{data['lat']}
+    return data['lat'],data['lon']
 
 # curl https://api.weather.gov/points/42.5763523,-71.9952737
 def get_noaa_endpoint(lat, lon):
